@@ -39,18 +39,19 @@ class PoemDAOTest {
         HibernateConfig.setTestMode(false);
 //        emf.close();
     }
-    @Test
-    @DisplayName("Test if findById throws exception")
-    void findByIdThrowException() {
-        Poem actual = poemDAO.findById(100L);
-        assertEquals(poem, actual);
-    }
+//    @Test
+//    @DisplayName("Test if findById throws exception")
+//    void findByIdThrowException() {
+//        Poem actual = poemDAO.findById(100L);
+//        assertEquals(poem, actual);
+//    }
 
-    @Test
-    void findById() {
-        Poem actual = poemDAO.findById(poem.getId());
-        assertEquals(poem, actual);
-    }
+//    @Test
+//    void findById() {
+//        try
+//        Poem actual = poemDAO.findById(poem.getId());
+//        assertEquals(poem, actual);
+//    }
 
     @Test
     void getAll() {

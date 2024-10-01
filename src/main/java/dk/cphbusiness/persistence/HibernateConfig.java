@@ -70,9 +70,12 @@ public class HibernateConfig {
     }
 
 
+
     private static String getDBName() {
+
         return Utils.getPropertyValue("db.name", "properties-from-pom.properties");
     }
+
     private static Properties setBaseProperties(Properties props){
         props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         props.put("hibernate.connection.driver_class", "org.postgresql.Driver");
