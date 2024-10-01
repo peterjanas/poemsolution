@@ -44,7 +44,7 @@ public class PoemRestTest {
 //                .setRoutes(SecurityRoutes.getSecurityRoutes())
 //                .setRoutes(SecurityRoutes.getSecuredRoutes())
                 .setRoutes(restRoutes.getPoemRoutes()) // A different way to get the EndpointGroup. Getting data from DB
-//                .setCORS()
+                .setCORS()
 //                .setApiExceptionHandling()
                 .startServer(7777);
     }
