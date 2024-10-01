@@ -1,6 +1,7 @@
 package dk.cphbusiness.persistence.daos;
 
 
+import dk.cphbusiness.exceptions.EntityNotFoundException;
 import dk.cphbusiness.persistence.entities.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -25,6 +26,9 @@ public class PoemDAO implements IDAO<Poem> {
     public Poem findById(Long id) {
         try (EntityManager entityManager = emf.createEntityManager()) {
             Poem poem = entityManager.find(Poem.class, id);
+            if(poem == null){
+                throw new EntityNotFoundException("Poem with id: " + id + " not found");
+            }
             return poem;
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());

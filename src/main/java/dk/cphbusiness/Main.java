@@ -15,9 +15,9 @@ public class Main {
                 .initiateServer()
                 .setRoutes(new RestRoutes().getPoemRoutes()) // A different way to get the EndpointGroup.
                 .startServer(7007)
-                .setCORS()
-                .setGeneralExceptionHandling()
+//                .setCORS()
+                .setGeneralExceptionHandling();
 //            .setErrorHandling()
-                .setApiExceptionHandling();
+//                .setApiExceptionHandling();
     }
 }
