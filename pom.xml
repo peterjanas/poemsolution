@@ -27,7 +27,7 @@
         <jbcrypt.version>0.4</jbcrypt.version>
         <!-- DATABASE PROJECT NAME ON SERVER  -->
         <db.name>poemdb</db.name>
-        <javalin.port>7070</javalin.port>
+        <javalin.port>7007</javalin.port>
     </properties>
     <repositories>
         <repository>
@@ -213,7 +213,6 @@
         <finalName>app</finalName> <!-- This is the name of the jar file -->
         <plugins>
             <plugin>
-                <!--  https://www.baeldung.com/java-accessing-maven-properties  -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>properties-maven-plugin</artifactId>
                 <version>1.0.0</version>
@@ -229,6 +228,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
